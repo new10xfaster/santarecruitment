@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Recruitment Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Santa Recruitment Logo"> 
+            </div>
+            <nav>
+                <ul><h4>Santa Recruitment agency</h4>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#jobs">Job Openings</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-image" style="background-image: url('image1.jpeg');"></div>
+        <div class="container hero-content">
+            <button class="hero-nav prev" onclick="prevImage()"><i class="fas fa-chevron-left"></i></button>
+            <button class="hero-nav next" onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
+            <h2>Connecting Talent with Opportunity</h2>
+            <p>Your trusted partner in finding the perfect candidates for your business.</p>
+            <a href="#jobs" class="btn">Explore Job Openings</a>
+        </div>
+    </section>
+
+    <section class="about" id="about" style="background-image: url('image2.jpeg');">
+        <div class="container">
+            <div class="content">
+                <h2>About Santa Recruitment</h2>
+                <p>
+Santa Recruitment Agency is a premier recruitment
+Company specializing in connecting global employers
+with top talent for international job opportunities. We
+focus on providing skilled professionals and workers to
+companies abroad, ensuring a seamless fit for both
+employer and employee. Our team of dedicated
+experts brings extensive experience in international
+recruitment, offering personalized solutions tailored to
+meet the specific needs of diverse industrie
+Our mission is to bridge the gap between talented
+individuals seeking employment abroad and
+companies in need of skilled workers. We strive to
+make the recruitment process smooth, transparent,
+and efficient, ensuring mutual success for both candidates and employers</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services" style="background-image: url('image3.jpeg');">
+        <div class="container content-wrapper"> 
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service">
+                    <i class="fas fa-users"></i>
+                    <h3>Talent Acquisition</h3>
+                    <p>We source, screen, and present the best candidates for your open positions.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Resume Screening</h3>
+                    <p>Save time and effort with our efficient and accurate resume screening services.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Candidate Assessment</h3>
+                    <p>We conduct thorough assessments to ensure candidates possess the right skills and experience.</p>
+                </div>
+				<div class="service">
+                    <i class="fas fa-passport"></i> 
+                    <h3>Visa Assistance</h3>
+                    <p>We provide comprehensive support throughout the visa application process.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-plane"></i> 
+                    <h3>Airline Ticketing</h3>
+                    <p>Seamless travel arrangements with our reliable ticketing services.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-hotel"></i> 
+                    <h3>Hotel Booking</h3>
+                    <p>Comfortable and convenient accommodation bookings for your trips.</p>
+                </div>
+				<div class="service">
+                    <i class="fas fa-globe"></i> 
+                    <h3>Work Abroad Programs</h3>
+                    <p>Explore exciting work opportunities in various countries.</p>
+                </div>
+				 <div class="service">
+                    <i class="fas fa-file-signature"></i> 
+                    <h3>Work Permit Assistance</h3>
+                    <p>Expert guidance in obtaining the necessary work permits.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-umbrella"></i> 
+                    <h3>Travel Insurance</h3>
+                    <p>Protect yourself with comprehensive travel insurance plans.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-id-card"></i> 
+                    <h3>Passport & Documents</h3>
+                    <p>Assistance with passport applications and other essential documents.</p>
+                </div>
+				
+            </div>
+        </div>
+    </section>
+
+    <section class="jobs" id="jobs" style="background-image: url('image4.jpeg');">
+        <div class="container">
+            <h2>Current Job Openings</h2>
+            <div class="job-grid">
+			<a> Contact us on whatsapp for more enquiries</a>
+			<a>email us santaagencyint@hotmail.com</a>
+			<a>Phone call+2547 0812 0113 </a>
+                <!-- Job Openings will go here -->
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" style="background-image: url('image5.jpeg');">
+        <div class="container">
+            <p>© 2024 Santa Recruitment Agency</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/+254708120113" class="whatsapp-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a> 
+
+    <script>
+        // Hero Image Slider
+        let currentImageIndex = 1; 
+        const totalHeroImages = 7; // Update this with the number of hero images you have
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + totalHeroImages) % totalHeroImages; 
+            updateHeroImage();
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % totalHeroImages;
+            updateHeroImage();
+        }
+
+        function updateHeroImage() {
+            const heroImage = document.querySelector('.hero .hero-image');
+            heroImage.style.backgroundImage = `url(image${currentImageIndex + 1}.jpeg)`; 
+        }
+
+        updateHeroImage();
+    </script>
+</body>
+</html>
